@@ -1,0 +1,26 @@
+MODEL:
+  NETWORK: unet
+  DATASET: prostate2d
+  NUMBER_CLASS: 2
+  CKPT_DIR: ./save_model/prostate2d_unet/source-A-model-latest.pth
+  METHOD: source_test
+  EXPNAME: w1220
+SOURCE:
+  MAX_EPOCHES: 300
+  BATCH_SIZE: 60
+  EVAL_ITERS: 500
+  SOURCE_DOMAIN: A
+  ALL_DOMAIN: 
+    - D
+    - E
+    - F
+ADAPTATION:
+  BATCH_SIZE: 20
+  EPOCH: 1
+  TARGET_DOMAIN:
+    - D
+    - E
+    - F
+
+
+  

@@ -1,0 +1,31 @@
+MODEL:
+  NETWORK: unet
+  DATASET: mmsd
+  NUMBER_CLASS: 4
+  CKPT_DIR: /data2/jianghao/TTA-MT/TTA-MT/save_model/mms2d_unet/source-A-model-latest.pth
+  METHOD: source
+  EXPNAME: DDD
+SOURCE:
+  MAX_EPOCHES: 200
+  BATCH_SIZE: 30
+  EVAL_ITERS: 500
+  SOURCE_DOMAIN: D
+  ALL_DOMAIN: 
+    - A
+    - D
+    - E
+    - F
+ADAPTATION:
+  BATCH_SIZE: 10
+  EPOCH: 1
+  TARGET_DOMAIN:
+  - B
+  - C
+  - D
+
+
+
+
+
+
+  
